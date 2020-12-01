@@ -1,36 +1,32 @@
 # Adventní kódování
 
-## Vzory kódů, které jsem použil při řešení 
+## Vzory kódů, které jsem použil při řešení
 
-
-### ------------------------------
+---
 Priklad nacteni kazdeho radku ze souboru a jeho vytisteni na terminal
 
-```
+```kotlin
     File("report1.txt").forEachLine {
             println(it)
     }
 ```
-
-###------------------------------
+---  
 Použít Array konstruktor, který přebírá velikost pole a funkci, která může vrátit počáteční hodnotu každého prvku pole vzhledem k jeho indexu a nasledne vytisteni na terminal
 
-```
+```kotlin
     val asc = Array(5) { i -> (i * i).toString() }
         asc.forEach { println(it) }
 ```
-
-###------------------------------
+---
 Priklad vytvoreni souboru a zapisu do souboru
 
-```
+```kotlin
     File("data.txt").writeText("Hello world!")
 ```
-
-###------------------------------
+---
 Jednoduchá smyčka
 
-```
+```kotlin
     // For loop
 
     for (i in 0..10) { println (i)}
