@@ -1,2 +1,5 @@
 Manifest-Version: 1.0
+Implementation-Title: AdventofCode
+Implementation-Version: 1.0-SNAPSHOT
+Main-Class: adventcode.MainKt
 
