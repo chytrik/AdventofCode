@@ -1,5 +1,15 @@
 # Adventní kódování
 
+## Spuštění
+Po vytvoření build pomocí 
+```
+./gradlew build
+```
+následně zavolat
+```bash
+java -jar build/libs/AdventofCode-1.0-SNAPSHOT.jar
+```
+
 ## Vzory kódů, které jsem použil při řešení
 
 ---
