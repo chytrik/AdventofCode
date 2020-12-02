@@ -47,9 +47,15 @@ fun printMenu(): Int {
         println("1 .. kontrola reportu, nalezeni 3 cisel davajici soucet 2020 a tisk jejich nasobku")
         println()
         println("Vyber cislo pro zvolenou operaci")
-        val inputChoice: Int = try { readLine()!!.toInt() } catch (e: NumberFormatException) { println("Chybne zadana hodnota"); 9 }
+        val inputChoice: Int = try { readLine()!!.toInt() } catch (e: NumberFormatException) { 9 }
         if (inputChoice in 0..1) return inputChoice
-        println()
+        else {
+            println("!!!    Chybne zadana hodnota    !!!")
+            println()
+            println("- STISKNETE ENTER a ZADEJTE ZNOVU -")
+            readLine()
+            println("\n\n\n")
+        }
     }
 }
 
