@@ -89,7 +89,7 @@ fun rulePasswords() {
         val ruleCharCount = passSplit[2].filter { it == ruleChar.single() }.count()
         if (ruleCharCount in numMinMax[0].toInt()..numMinMax[1].toInt() ) vpohode++
     }
-    println("Platnych hesel podle zásad je " + vpohode)
+    println("Platnych hesel podle zásad je $vpohode")
 }
 
 /*
@@ -121,5 +121,5 @@ fun rule2Passwords() {
             vpohode++
         //println(passSplit.toString() + "#" + passSplit[2][numFirstSecond[0].toInt()-1] + "#" + passSplit[2][numFirstSecond[1].toInt()-1])
     }
-    println("Platnych hesel podle zásad je " + vpohode)
+    println("Platnych hesel podle zásad je $vpohode")
 }

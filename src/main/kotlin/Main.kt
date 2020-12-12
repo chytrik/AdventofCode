@@ -1,7 +1,6 @@
 package adventcode
 
-import java.io.File
-
+/*
 fun getGreeting(): String {
     val words = mutableListOf<String>()
     words.add("Hello,")
@@ -9,12 +8,13 @@ fun getGreeting(): String {
 
     return words.joinToString(separator = " ")
 }
+*/
 
 fun main() {
     // Uvitani uz je passe, ale nechavam ho tady zakomentovane
     // println(getGreeting())
-    val choiceMenu = printMenu()
-    when (choiceMenu) {
+    //
+    when (printMenu()) {
         0 -> {
             // prvni zadani
             val (x, y) = readReport(0)
