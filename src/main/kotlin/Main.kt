@@ -25,11 +25,8 @@ fun main() {
             val (x, y, z) = readReport(1)
             println("$x + $y + $z, a to je " + x * y * z)
         }
-        2 -> {
-            rulePasswords()
-        }
-        3 -> {
-            rule2Passwords()
-        }
+        2 -> rulePasswords()
+        3 -> rule2Passwords()
+        4 -> tobogan()
     }
 }

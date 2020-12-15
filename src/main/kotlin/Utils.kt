@@ -2,31 +2,6 @@ package adventcode
 
 import java.io.File
 
-fun printMenu(): Int {
-    while (true) {
-        println("/------------------\\")
-        println("| Adventi kodovani |")
-        println("\\-----------------/")
-        println()
-        println("Menu:")
-        println("0 .. kontrola reportu, nalezeni 2 cisel davajici soucet 2020 a tisk jejich nasobku")
-        println("1 .. kontrola reportu, nalezeni 3 cisel davajici soucet 2020 a tisk jejich nasobku")
-        println("2 .. kontrola hesel, nalezeni platnych hesel podle zasady musi obsahovat min a max daneho pismene")
-        println("3 .. kontrola hesel, nalezeni platnych hesel podle zasady musi obsahovat 1 a nebo 2 vyskyt daneho pismene")
-        println()
-        println("Vyber cislo pro zvolenou operaci")
-        val inputChoice: Int = try { readLine()!!.toInt() } catch (e: NumberFormatException) { 9 }
-        if (inputChoice in 0..3) return inputChoice
-        else {
-            println("!!!    Chybne zadana hodnota    !!!")
-            println()
-            println("- STISKNETE ENTER a ZADEJTE ZNOVU -")
-            readLine()
-            println("\n\n\n")
-        }
-    }
-}
-
 /*
 Zpráva o výdajích je samozřejmě mnohem větší. Najděte dvě položky, které součet 2020;
 co dostanete, když je znásobíte dohromady?
@@ -122,4 +97,11 @@ fun rule2Passwords() {
         //println(passSplit.toString() + "#" + passSplit[2][numFirstSecond[0].toInt()-1] + "#" + passSplit[2][numFirstSecond[1].toInt()-1])
     }
     println("Platnych hesel podle zásad je $vpohode")
+}
+
+/*
+    Tobogan
+ */
+fun tobogan() {
+    println()
 }
