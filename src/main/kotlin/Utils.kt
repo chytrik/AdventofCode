@@ -64,7 +64,7 @@ fun rulePasswords() {
         val ruleCharCount = passSplit[2].filter { it == ruleChar.single() }.count()
         if (ruleCharCount in numMinMax[0].toInt()..numMinMax[1].toInt() ) vpohode++
     }
-    println("Platnych hesel podle zásad je $vpohode")
+    println("Platných hesel podle zásad je $vpohode")
 }
 
 /*
@@ -96,12 +96,31 @@ fun rule2Passwords() {
             vpohode++
         //println(passSplit.toString() + "#" + passSplit[2][numFirstSecond[0].toInt()-1] + "#" + passSplit[2][numFirstSecond[1].toInt()-1])
     }
-    println("Platnych hesel podle zásad je $vpohode")
+    println("Platných hesel podle zásad je $vpohode")
 }
 
 /*
-    Tobogan
+    Sáňkařská dráha může sledovat pouze několik konkrétních svahů (rozhodli jste se pro levnější model, který preferuje
+    racionální čísla); začněte počítáním všech stromů, se kterými se setkáte pro svah a to vzorcem => vpravo 3, dolů 1
+
+    Můj tip: Pro otestování použít soubor tobogan0.txt, kde má být výsledek 7 stromů
  */
 fun tobogan() {
-    println()
+    val toboganLines = File("tobogan.txt").readLines()
+    // X-ová souřadnice na svahu (pozn. Y-ová není potřeba, to určuje řádek, který se posouvá automaticky)
+    var x = 1
+    // počet stromů na cestě po svahu
+    var treeCount = 0
+    // násobitel pro počet vzorů
+    toboganLines.forEach {
+        /*
+            Prodloužení řádku vzoru svahu
+            Zadání, zahrnující stromovou genetiku a stabilitu biomu, že se stejný vzor mnohokrát opakuje doprava
+         */
+        val toboganLong = it.length
+        val toboganPattern = it.repeat(x/toboganLong+1)
+        if (toboganPattern[x-1] == "#".single()) treeCount++
+        x+=3
+    }
+    println("Platných hesel podle zásad je $treeCount")
 }
