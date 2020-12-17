@@ -111,7 +111,7 @@ fun rule2Passwords() {
         2 stromy pro x0=1, y0=2
     a pro zvolení menu = 5 je odpověď násobení 336 u tobogan0.txt.
  */
-fun tobogan(x0: Int, y0: Int): Int {
+fun tobogan(x0: Int, y0: Int): Long {
     val toboganLines = File("tobogan.txt").readLines()
     // X-ová souřadnice na svahu (pozn. Y-ová není potřeba, to určuje řádek, který se posouvá automaticky)
     var x = 1
@@ -135,5 +135,5 @@ fun tobogan(x0: Int, y0: Int): Int {
         }
     }
     println("Počet stromů na svahu podle vzorce vpravo $x0 a dolů $y0 je $treeCount")
-    return treeCount
+    return treeCount.toLong()
 }

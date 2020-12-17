@@ -30,9 +30,9 @@ fun main() {
         4 -> tobogan(3,1)
         5 -> {
             // x0=3, y0=1 * x0=1, y0=1 * x0=5, y0=1 * x0=7, y0=1 * x0=1, y0=2
-            val toboLength: Long = tobogan(3,1).toLong() * tobogan(1,1).toLong() *
-                    tobogan(5,1).toLong() * tobogan(7,1).toLong() * tobogan(1,2).toLong()
-            println("Výsledek násobení počtu stromů na každém ze svahů je $toboLength")
+            println("Výsledek násobení počtu stromů na každém ze svahů je "
+                    + tobogan(3,1) * tobogan(1,1) *
+                    tobogan(5,1) * tobogan(7,1) * tobogan(1,2))
         }
     }
 }
