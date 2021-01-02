@@ -1,7 +1,7 @@
 # Adventní kódování
 
 ## Spuštění
-Po vytvoření build pomocí 
+Vytvoření build pomocí příkazu
 ```
 ./gradlew build
 ```
@@ -13,7 +13,7 @@ java -jar build/libs/AdventofCode-1.0-SNAPSHOT.jar
 ## Vzory kódů, které jsem použil při řešení
 
 ---
-Priklad nacteni kazdeho radku ze souboru a jeho vytisteni na terminal
+Příklad načtení každého řádku ze souboru a jeho vytištění na terminál
 
 ```kotlin
     File("report1.txt").forEachLine {
