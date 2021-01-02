@@ -7,7 +7,7 @@ Každý řádek uvádí zásady hesla a poté heslo.
 Zásady hesla označují nejnižší a nejvyšší počet opakování daného písmena, aby bylo heslo platné.
 Například "1-3 a:" znamená, že heslo musí obsahovat "a" alespoň 1x a 3x.
 */
-fun rulePasswords() {
+fun rulePasswords(): Int {
     val passwordLines = File("passwords1.txt").readLines()
     var vpohode = 0
     passwordLines.forEach{ p ->
@@ -34,7 +34,7 @@ fun rulePasswords() {
         val ruleCharCount = passSplit[2].filter { it == ruleChar.single() }.count()
         if (ruleCharCount in numMinMax[0].toInt()..numMinMax[1].toInt() ) vpohode++
     }
-    println("Platných hesel podle zásad je $vpohode")
+    return vpohode
 }
 
 /*
@@ -51,7 +51,7 @@ fun rulePasswords() {
     1-3 b: cdefgje neplatná : pozice 1 ani pozice 3 neobsahuje "b".
     2-9 c: cccccccccje neplatný : pozice 2 i pozice 9 obsahují "c".
 */
-fun rule2Passwords() {
+fun rule2Passwords(): Int {
     val passwordLines = File("passwords1.txt").readLines()
     var vpohode = 0
     passwordLines.forEach { p ->
@@ -66,5 +66,5 @@ fun rule2Passwords() {
             vpohode++
         //println(passSplit.toString() + "#" + passSplit[2][numFirstSecond[0].toInt()-1] + "#" + passSplit[2][numFirstSecond[1].toInt()-1])
     }
-    println("Platných hesel podle zásad je $vpohode")
+    return vpohode
 }

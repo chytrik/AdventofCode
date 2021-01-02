@@ -37,6 +37,5 @@ fun tobogan(x0: Int, y0: Int): Long {
             x+=x0
         }
     }
-    println("Počet stromů na svahu podle vzorce vpravo $x0 a dolů $y0 je $treeCount")
     return treeCount.toLong()
 }
