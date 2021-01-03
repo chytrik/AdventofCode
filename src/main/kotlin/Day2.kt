@@ -3,11 +3,13 @@ package adventcode
 import java.io.File
 
 /*
-Každý řádek uvádí zásady hesla a poté heslo.
-Zásady hesla označují nejnižší a nejvyšší počet opakování daného písmena, aby bylo heslo platné.
-Například "1-3 a:" znamená, že heslo musí obsahovat "a" alespoň 1x a 3x.
+    --- Day 2: Password Philosophy ---
+
+    Každý řádek uvádí zásady hesla a poté heslo.
+    Zásady hesla označují nejnižší a nejvyšší počet opakování daného písmena, aby bylo heslo platné.
+    Například "1-3 a:" znamená, že heslo musí obsahovat "a" alespoň 1x a 3x.
 */
-fun rulePasswords(): Int {
+fun passwordPhilosophy(): Int {
     val passwordLines = File("passwords1.txt").readLines()
     var vpohode = 0
     passwordLines.forEach{ p ->
@@ -51,7 +53,7 @@ fun rulePasswords(): Int {
     1-3 b: cdefgje neplatná : pozice 1 ani pozice 3 neobsahuje "b".
     2-9 c: cccccccccje neplatný : pozice 2 i pozice 9 obsahují "c".
 */
-fun rule2Passwords(): Int {
+fun passwordPhilosophy2(): Int {
     val passwordLines = File("passwords1.txt").readLines()
     var vpohode = 0
     passwordLines.forEach { p ->

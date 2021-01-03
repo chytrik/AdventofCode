@@ -3,11 +3,13 @@ package adventcode
 import java.io.File
 
 /*
-Zpráva o výdajích je souboru report1.txt.
-Cílem je najít dvě položky, u nichž je součet 2020;
-A pak je znásobit dohromady.
+    --- Day 1: Report Repair ---
+
+    Zpráva o výdajích je souboru report1.txt.
+    Cílem je najít dvě položky, u nichž je součet 2020;
+    A pak je znásobit dohromady.
 */
-fun readReport(numberVal: Int): List<Int> {
+fun reportRepair(numberVal: Int): List<Int> {
     val reportLines = File("report1.txt").readLines()
     when (numberVal) {
         0 -> {

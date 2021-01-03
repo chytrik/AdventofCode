@@ -3,6 +3,8 @@ package adventcode
 import java.io.File
 
 /*
+    --- Day 3: Toboggan Trajectory ---
+    
     Sáňkařská dráha může sledovat pouze několik konkrétních svahů (rozhodli jste se pro levnější model, který preferuje
     racionální čísla); začněte počítáním všech stromů, se kterými se setkáte pro svah a to vzorcem => vpravo x0, dolů y0
 
@@ -14,7 +16,7 @@ import java.io.File
         2 stromy pro x0=1, y0=2
     a pro zvolení menu = 5 je odpověď násobení 336 u tobogan0.txt.
  */
-fun tobogan(x0: Int, y0: Int): Long {
+fun tobogganTrajectory(x0: Int, y0: Int): Long {
     val toboganLines = File("tobogan.txt").readLines()
     // X-ová souřadnice na svahu (pozn. Y-ová není potřeba, to určuje řádek, který se posouvá automaticky)
     var x = 1
