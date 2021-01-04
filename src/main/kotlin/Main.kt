@@ -35,6 +35,9 @@ fun main() {
                     + tobogganTrajectory(3,1) * tobogganTrajectory(1,1) *
                     tobogganTrajectory(5,1) * tobogganTrajectory(7,1) * tobogganTrajectory(1,2))
         // --------------------------------------------------------------- Day4
-        6 -> println("Počet platných pasů je " + passportProcessing())
+        6 -> println("Počet platných pasů je " +
+                passportProcessing(listOf("byr","0","iyr","0","eyr","0","hgt","0","hcl","0","ecl","0","pid","0")))
+        7 -> println("Počet platných pasů včetně kontrol polí je " +
+                passportProcessing(listOf("byr","1","iyr","1","eyr","1","hgt","1","hcl","1","ecl","1","pid","1")))
     }
 }
